@@ -1,6 +1,7 @@
 package conta;
 
 import conta.util.Cores;
+import conta.model.Conta;
 
 import java.util.Scanner;
 
@@ -10,6 +11,17 @@ public class Menu {
 		// TODO Auto-generated method stub
 		Scanner leia = new Scanner(System.in);
 		int opcao;
+		
+		//Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste 
+		Conta c1 = new Conta(5, 845 ,1 , "Mariana", 2000.0f);
+		c1.visualizar();
+		c1.sacar(12000.0f);
+		c1.visualizar();
+		c1.sacar(0.12f);
+		c1.visualizar();
+		c1.depositar(5000.0f);
+		c1.visualizar();
+		
 		
 		while(true) {
 			System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND
@@ -83,6 +95,7 @@ public class Menu {
 			
 		}
 	}
+	
 	public static void sobre() {
 		System.out.println("\n*****************************************************");
 		System.out.println("Projeto Desenvolvido por: Mariana Marie Iha");
@@ -90,6 +103,7 @@ public class Menu {
 		System.out.println("github.com/ihamari");
 		System.out.println("*******************************************************");
 	}
+	
 }
 
 
