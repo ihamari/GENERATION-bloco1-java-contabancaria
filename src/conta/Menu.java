@@ -1,7 +1,9 @@
 package conta;
 
 import conta.util.Cores;
-import conta.model.Conta;
+//import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 import java.util.Scanner;
 
@@ -12,15 +14,35 @@ public class Menu {
 		Scanner leia = new Scanner(System.in);
 		int opcao;
 		
-		//Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste Teste 
-		Conta c1 = new Conta(5, 845 ,1 , "Mariana", 2000.0f);
-		c1.visualizar();
-		c1.sacar(12000.0f);
-		c1.visualizar();
-		c1.sacar(0.12f);
-		c1.visualizar();
-		c1.depositar(5000.0f);
-		c1.visualizar();
+//		Teste da Classe Conta 
+//		Conta c1 = new Conta(5, 845 ,1 , "Mariana", 2000.0f);
+//		c1.visualizar();
+//		c1.sacar(12000.0f);
+//		c1.visualizar();
+//		c1.sacar(0.12f);
+//		c1.visualizar();
+//		c1.depositar(5000.0f);
+//		c1.visualizar();
+		
+		//Teste da Classe Conta Corrente
+		ContaCorrente cc1 = new ContaCorrente(4563, 369, 1, "Pedro", 1000.0f, 2000.0f);
+		cc1.visualizar(); // saldo: 1000.0f
+		cc1.sacar(100.0f);
+		cc1.visualizar();//  saldo: 900.0f
+		cc1.depositar(200.0f);
+		cc1.visualizar();//  saldo: 1100.0f
+		cc1.sacar(1500.0f);
+		cc1.visualizar();// saldo: 0 - limite: 1600 
+		cc1.sacar(8000.0f); // limite insuficientes para o saque!
+		cc1.visualizar();
+		
+		//Teste Classe Conta Poupança
+		ContaPoupanca cp1 = new ContaPoupanca(3564, 403, 2, "Brian", 100000.0f, 15);
+		cp1.visualizar();
+        cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
 		
 		
 		while(true) {
